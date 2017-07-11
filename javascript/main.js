@@ -11,21 +11,21 @@ function createMap(lat, lng, zoom){
   };
   var map = new google.maps.Map(document.querySelector('#map'), mapOptions);
   return map;
-};
+}
 
 
 // Helper function to set height equal to window height
 function setHeights(){
   $('#map').height( $(document).height() - 65 );
   $('#sidebar').height( $(document).height() );
-};
+}
 
 
 // Helper to show/hide sidebar depending on screen width
 // This function is called whenever the body is resized (<body onresize="showHideSidebar();">)
 function showHideSidebar(){
   $(document).width() > 995 ? $("#sidebar").show() : $("#sidebar").hide();
-};
+}
 
 
 // All places on the map (model)
@@ -145,7 +145,7 @@ function Place(name, lat, lng){
     self.active();
   });
 
-};
+}
 
 
 // Application ViewModel
@@ -187,7 +187,7 @@ function neighborhoodMapVM(){
     $('#sidebar').toggle();
   });
 
-};
+}
 
 
 // Function that applies VM bindings when google maps is loaded
