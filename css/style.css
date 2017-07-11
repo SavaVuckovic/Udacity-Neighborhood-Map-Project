@@ -1,0 +1,155 @@
+
+/* General */
+html,
+body {
+  height: 100%;
+  font-family: 'Dosis', sans-serif;
+}
+
+.container-fluid,
+.col-md-10,
+.col-md-2 {
+  padding: 0;
+}
+
+
+/* Navbar */
+.navigation {
+  margin: 0;
+  padding: 0;
+  background: #393939;
+}
+
+.heading {
+  text-align: center;
+}
+
+.navigation h3 {
+  margin: 0;
+  padding: 20px;
+  color: #00c892;
+  text-align: center;
+  position: relative;
+}
+
+.toggle {
+  display: none;
+}
+
+.toggle-button {
+  float: right;
+  margin: 20px 15px 5px 5px;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  border: none;
+}
+
+.bar {
+  display: block;
+  width: 100%;
+  float: left;
+  height: 14%;
+  margin-bottom: 23%;
+  background-color: #00c892;
+}
+
+
+/* Sidebar */
+#sidebar {
+  margin: 0;
+  padding: 0;
+  background: #393939;
+  height: 900px;
+}
+
+.search {
+  width: 100%;
+  text-align: center;
+}
+
+.searchbar {
+  margin-top: 10px;
+  padding: 0;
+  padding: 10px;
+}
+
+.searchbar input {
+  width: 80%;
+  margin: 0;
+  padding: 6px;
+  border: 1px solid #000;
+}
+
+.search hr {
+  border-top-color: #00c892;
+  width: 80%;
+  margin: 5px auto;
+}
+
+.places-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-item {
+  padding-top: 12px;
+  text-align: center;
+}
+
+.sidebar-item a {
+  color: #00c892;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.selected {
+  border: 2px solid red; /**/
+}
+
+
+/* Map */
+.map {
+  padding: 0;
+}
+
+#map {
+  height: 700px;
+}
+
+.infowindow-content {
+  text-align: center;
+}
+
+
+/* Smaller devices */
+@media screen and (max-width: 995px){
+
+  .navigation h3 {
+    font-size: 18px;
+  }
+
+  .toggle {
+    display: block;
+  }
+
+  #sidebar {
+    position: absolute;
+    top: 0;
+    width: 55%;
+  }
+
+  #map {
+    width: 100%;
+  }
+
+}
+
+
+@media screen and (max-width: 500px){
+
+  #sidebar {
+    width: 75%;
+  }
+
+}

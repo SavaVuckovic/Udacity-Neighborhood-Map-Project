@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Neighborhood Map</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <!-- Bootstrap minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-10">
+
+          <!-- Navbar -->
+          <nav class="navigation">
+            <div class="row">
+              <div class="col-xs-10 col-md-12 heading">
+                <h3>Neighborhood Map</h3>
+              </div>
+              <div class="col-xs-2 col-md-0 toggle">
+                <button class="toggle-button">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </button>
+              </div>
+            </div>
+          </nav>
+
+          <!-- Map -->
+          <div id="map"></div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar" class="col-md-2">
+
+            <!-- Search -->
+            <div class="search">
+              <div class="searchbar">
+                <input type="text" placeholder="Search" data-bind="textInput: search_filter, valueUpdate: 'afterkeydown'" />
+                <!--<button type="button"><span class="glyphicon glyphicon-search"></span></button>-->
+              </div>
+              <hr>
+            </div>
+
+
+            <!-- List -->
+            <ul class="places-list" data-bind="foreach: places">
+              <div data-bind="if: show">
+                <li  class="sidebar-item">
+                   <a data-bind="text: name, click: $root.setActiveMarker"></a>
+                </li>
+              </div>
+            </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="javascript/jquery.min.js"></script>
+    <!-- Knockout JS -->
+    <script src="javascript/ko.min.js"></script>
+    <!-- Main script -->
+    <script src="javascript/main.js"></script>
+    <!-- Google Map API -->
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYkpZEiESGNcB1siy8A513Z4gL0eB0XaA&callback=initialize"
+      onerror="alert('The application could not connect to Google Maps API. \nPlease troubleshoot your internet connection and try again. \nThank you for using this application.');"></script>
+
+  </body>
+</html>
